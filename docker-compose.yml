@@ -37,6 +37,8 @@ services:
       - postgres
     ports:
       - "8083:8083"
+    volumes:
+      - ./connect-plugins/mongodb-kafka-connect:/kafka/connect/mongodb-kafka-connect
     environment:
       BOOTSTRAP_SERVERS: kafka:29092
       GROUP_ID: 1
